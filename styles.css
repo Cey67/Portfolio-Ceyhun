@@ -1,0 +1,450 @@
+/* ====================== BASE ====================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 0 0 200px;
+  background-color: #0c0c0c;
+  color: #ecd453;
+}
+
+a {
+  color: #ecd453;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* ---------------------- Boutons ---------------------- */
+button, .telecharger-cv {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button {
+  font-size: 40px;
+  color: white;
+  background: none;
+  text-decoration: none;
+}
+
+.telecharger-cv {
+  background-color: #ecd453;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 15px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Animation ligne sur bouton */
+button::before,
+button::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #ecd453;
+  transition: 0.5s;
+}
+
+button:hover::before,
+button:hover::after {
+  width: 100%;
+}
+
+button:hover {
+  background-color: #ecd55383;
+  color: white;
+}
+
+/* ====================== TYPOGRAPHIE ====================== */
+h1, h2, h3, h4, button {
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.6;
+  text-align: justify;
+  text-indent: 20px;
+  background-color: #1C1C1C;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+/* ====================== HEADER ====================== */
+header {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  background: transparent;
+  z-index: 10;
+  flex-direction: column;
+}
+
+.header-top {
+  display: none;
+}
+
+.logo-desktop {
+  display: block;
+}
+
+.logo-mobile {
+  display: none;
+  height: 40px;
+}
+
+.menu-burger {
+  font-size: 24px;
+  color: #ecd453;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ====================== NAVIGATION ====================== */
+nav {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #2B2B2B;
+  border-radius: 5px;
+}
+
+/* ====================== SECTIONS ====================== */
+section {
+  padding: 20px;
+  margin: 15px;
+  margin-top: -20px;
+  background-color: #1C1C1C;
+}
+
+#acceuil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  background: url("images/logo_CS/Drago.png") center/cover no-repeat;
+}
+
+#acceuil h1 {
+  font-size: 3rem;
+  color: #ecd453;
+}
+
+#acceuil h2 {
+  color: #ecd453;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+
+#acceuil h3 {
+  font-size: 1.5rem;
+  color: #ecd553bd;
+  margin-bottom: 20px;
+}
+
+#acceuil p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-align: center;
+  text-indent: 0;
+}
+
+.acceuil-container {
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #0c0c0c;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeIn 1.5s ease;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* ====================== COMPETENCES ====================== */
+.competences-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.competences-container img.competences {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.competences-container img.competences:hover {
+  transform: scale(1.1);
+}
+
+/* ====================== PARCOURS ====================== */
+#parcours h2,
+#veille h2,
+#projet h2 {
+  text-align: center;
+  color: #ecd453;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  border-left: 3px solid #ecd453;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background: #ecd453;
+  border-radius: 50%;
+  border: 3px solid #1C1C1C;
+  box-shadow: 0 0 0 2px #ecd453;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #ecd453;
+  margin-bottom: 5px;
+  font-size: 18px;
+  padding-left: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.timeline-content {
+  background: #0c0c0c;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ====================== VEILLE ====================== */
+#veille {
+  background-color: #1C1C1C;
+  padding: 20px;
+  color: #fff;
+}
+
+#veille ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#veille ul > li {
+  margin-bottom: 30px;
+  line-height: 1.7;
+  background: #0c0c0c93;
+  padding: 20px;
+  border-left: 4px solid #ecd453;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+#veille ul ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+#veille strong {
+  font-size: 1.2em;
+  color: #ecd453;
+}
+
+#veille em {
+  font-style: italic;
+  color: #ecd553c0;
+}
+
+/* ====================== CONTACT ====================== */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-container {
+  border: 2px solid #ecd453;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.contact-info, #contactForm {
+  padding: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2B2B2B;
+  color: #ecd453;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #AFAFAF;
+}
+
+/* ====================== FOOTER ====================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin: 15px;
+  background-color: #1C1C1C;
+  color: #ecd453;
+}
+
+/* ====================== ANIMATIONS ====================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 1024px) {
+  body {
+    padding: 0;
+  }
+
+  header {
+    position: relative;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo-desktop { display: none; }
+  .logo-mobile { display: block; }
+
+  .menu-burger {
+    position: fixed;
+    top: 20px; /* Décale un peu vers le bas si tu veux un espacement depuis le bord */
+    right: 20px; /* Décale un peu vers la gauche si tu veux un espacement depuis le bord */
+    font-size: 28px;
+    z-index: 1000; /* Assure-toi qu'il est au-dessus des autres éléments */
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(12, 12, 12, 0.95);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  nav.active {
+    display: flex;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    font-size: 22px;
+  }
+
+  section {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 18px; }
+
+  .acceuil-container { padding: 20px; }
+  .competences-container img.competences {
+    width: 70px;
+    height: 70px;
+  }
+
+  button { font-size: 20px; }
+}
